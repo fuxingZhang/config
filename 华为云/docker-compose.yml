@@ -1,0 +1,45 @@
+version: "3.7"
+services:
+  nginx:
+    image: zhangfuxing/nginx:latest
+    container_name: nginx
+    user: root
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - /app/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - /app/nginx/static:/usr/share/nginx/static
+    expose:
+      - 80
+    # command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
+    ports:
+      - 7001:80
+
+    # deploy:
+    #   replicas: 1
+    #   update_config:
+    #     parallelism: 2  # 一次性更新的容器数量
+    #   restart_policy:
+    #     condition: on-failure
+    #     delay: 10s
+    #     max_attempts: 3
+    #     window: 120s
+
+    # healthcheck:
+    #   test: ["CMD", "curl", "-f", "http://localhost:3000"]
+    #   interval: 1m30s
+    #   timeout: 10s
+    #   retries: 3
+
+    # depends_on:
+    #   - redis
+
+    # logging:
+    #   driver: "json-file"
+    #   options:
+    #     max-size: "200k"
+    #     max-file: "10"
+
+  # redis:
+  #   image: redis
