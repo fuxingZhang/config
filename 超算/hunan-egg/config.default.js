@@ -84,7 +84,7 @@ module.exports = appInfo => {
   };
 
   // 用裁切脚本机器地址替换下面的IP
-  config.queueName = `192.168.0.145_order`;
+  config.queueName = `192.168.32.165_order`;
 
   config.JWT_SECRET = `zfx_./()|~-=`;
 
