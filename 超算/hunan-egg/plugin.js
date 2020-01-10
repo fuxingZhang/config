@@ -22,10 +22,10 @@ exports.mysql = {
   package: '@eggplugin/mysql',
 };
 
-// exports.rabbitmq = {
-//   enable: true,
-//   package: '@eggplugin/rabbitmq',
-// };
+exports.rabbitmq = {
+  enable: true,
+  package: '@eggplugin/rabbitmq',
+};
 
 exports.s3 = {
   enable: true,
