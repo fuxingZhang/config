@@ -98,7 +98,7 @@ module.exports = appInfo => {
   };
 
   // 统一用户地址
-  config.userUrl = 'https://onemap.ygyxtc.com/UUMS/rest/user';
+  config.userUrl = 'http://192.168.32.156/UUMS/rest/user';
 
   // redis
   config.redis = {
