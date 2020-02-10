@@ -97,11 +97,14 @@ module.exports = appInfo => {
     agent: false,
   };
 
+  // 统一用户地址
+  config.userUrl = 'https://onemap.ygyxtc.com/UUMS/rest/user';
+
   // redis
   config.redis = {
     client: {
-      port: 6379,          
-      host: '192.168.32.167',   
+      port: 6379,
+      host: '192.168.32.167',
       password: 'esri@123',
       db: 0
     }
