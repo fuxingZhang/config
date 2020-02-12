@@ -71,7 +71,7 @@ module.exports = appInfo => {
     timezone: "+08:00"
   };
 
-  exports.mysql = {
+  config.mysql = {
     client: {
       host: '192.168.32.201',
       port: '3306',
@@ -110,6 +110,12 @@ module.exports = appInfo => {
     }
   };
 
+  // 微信
+  config.weixin = {
+    APPID: 'wxda321bfffcf4221a',
+    APPSECRET: '80569eb06aef7384301ba89a00f675a6',
+  };
+
   //s3
   config.s3 = {
     client: {
@@ -126,16 +132,16 @@ module.exports = appInfo => {
 
   // 给善成的mq发送的配置
   config.provider = {
-    "endpoint": "http://192.168.32.37:8060",
-    "signatureVersion": "v4",
-    "region": "",
-    "accessKeyId": "CU7BZRITSJMRHZ2GPQMB",
-    "secretAccessKey": "PAu4UdHTU9NsYbKPZ7q0nsI8jbCzTRh8R8GycPR4",
-    "tiledBucket": "basemap",
-    "platform": "",
-    "bucket": "datahunan-image",
-    "resultBucket": "datahunan-result",
-    "storeBucket": "datahuan-store"
+    endpoint: "http://192.168.32.37:8060",
+    signatureVersion: "v4",
+    region: "",
+    accessKeyId: "CU7BZRITSJMRHZ2GPQMB",
+    secretAccessKey: "PAu4UdHTU9NsYbKPZ7q0nsI8jbCzTRh8R8GycPR4",
+    tiledBucket: "basemap",
+    platform: "",
+    bucket: "datahunan-image",
+    resultBucket: "datahunan-result",
+    storeBucket: "datahuan-store"
   }
 
   //防止post请求被egg禁用
