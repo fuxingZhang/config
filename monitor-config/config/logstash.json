@@ -1,0 +1,33 @@
+{
+  "template": "nginx-*",
+  "mappings": {
+    "_default_": {
+      "dynamic_templates": [
+        {
+          "string_fields": {
+            "mapping": {
+              "norms": false,
+              "type": "keyword"
+            },
+            "match_mapping_type": "string",
+            "match": "*"
+          }
+        }
+      ],
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        },
+        "@version": {
+          "type": "keyword"
+        },
+        "path": {
+          "type": "keyword"
+        },
+        "request_time": {
+          "type": "half_float"
+        }
+      }
+    }
+  }
+}

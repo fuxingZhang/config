@@ -1,0 +1,17 @@
+
+
+/root/logstash-5.5.0/bin/system-install /root/logstash-5.5.0/config/startup.options systemd
+
+vim /etc/systemd/system/logstash.service
+
+systemctl enable logstash.service
+
+systemctl start logstash.service
+
+systemctl status logstash.service
+
+
+/root/filebeat-5.5.0-linux-x86_64/system-install /root/logstash-5.5.0/config/startup.options systemd
+
+sudo ./filebeat -e -c filebeat.yml
+nohup   ./filebeat -e -c filebeat.yml    > /dev/null 2>&1  &

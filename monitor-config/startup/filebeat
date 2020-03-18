@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# chkconfig: 2345 90 10
+# description: filebeat
+
+HOME=/root/filebeat-5.5.0-linux-x86_64
+case $1 in
+        start) $HOME/filebeat -e -c $HOME/filebeat.yml&;;
+        *) echo "filebeat start" ;;
+esac
